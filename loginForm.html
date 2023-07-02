@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="formContainer">
+    <h2>Hello and Welcome</h2>
+    <div class="formsRow">
+      <form onsubmit="signUp(event)">
+        <h3 class="formHeader">Sign Up</h3>
+        <input type="text" class="userInput" placeholder="Please enter your name" />
+        <input type="password" class="userPass" placeholder="Please enter your password" />
+        <input class="submitBtn1" type="submit" value="Sign Up!" />
+      </form>
+      <form onsubmit="logIn(event)">
+        <h3 class="formHeader">Log In</h3>
+        <input type="text" class="userInputLog" placeholder="Please enter your name" />
+        <input type="password" class="userPassLog" placeholder="Please enter your password" />
+        <input class="submitBtn2" type="submit" value="Log In!" />
+      </form>
+    </div>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <p id="popup-message"></p>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+
+</html>

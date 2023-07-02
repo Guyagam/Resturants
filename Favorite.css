@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap');
+
+body {
+  background-color: whitesmoke;
+  font-family: 'IBM Plex Sans Hebrew', sans-serif;
+}
+
+
+h3 {
+  text-align: center;
+}
+
+.favoriteContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.favoriteCard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+  align-content: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.resturant_information {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  font-size: 13px;
+  max-width: 300px;
+  text-align: center;
+  min-height: fit-content;
+  border-radius: 9px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 4px 4px;
+}
+
+.resturant_information:hover {
+  transform: scale(1.05);
+  background-color: rgb(116, 225, 240);
+  color: rgb(11, 2, 68);
+  border-color: rgb(116, 225, 240);
+}
+
+
+.backBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: ease 0.4s;
+  border-radius: 8px;
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
+.backBtn:hover {
+  cursor: pointer;
+  color: black;
+  background-color: rgb(106, 193, 255);
+  transform: scale(1.1);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.removeBtn {
+  flex-grow: 1;
+  margin-right: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: lightgray;
+  max-width: fit-content;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnContainer>.removeBtn:hover {
+  background-color: rgba(255, 0, 0, 0.662);
+}

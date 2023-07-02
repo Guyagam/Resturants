@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="RenderResturant()">
+    <audio autoplay loop>
+        <source src="music/Hotel lobby music - 2020 Instrumental Jazz Lounge from luxury hotels.mp3" type="audio/mpeg">
+    </audio>
+    <div class="header">
+        <img src="images/logo.png" />
+        <h1>הזמנת אוכל בקליק!</h1>
+        <button class="logOutBtn" onclick="logOut()">Log Out</button>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+
+        </div>
+
+    </div>
+
+
+    <div id="right">
+        <div class="filterDiv">
+            <label for="opt" class="filterLabel">בחר/י סוג מסעדה:</label>
+            <select id="opt" class="filterSelect"></select>
+
+            <label for="delivery" class="filterLabel">האם תרצה/י משלוח או לשבת בסניף?</label>
+            <select id="delivery" class="filterSelect">
+                <option id="delivery">משלוח</option>
+                <option id="seat">לשבת בסניף</option>
+            </select>
+
+            <label for="price" class="filterLabel">בחר/י טווח מחירים:</label>
+            <select id="price" class="filterSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+
+
+
+        <input type="button" value="סנן" class="button1" onclick="OnFilter()" />
+        <input type="button" value="בטל סנן" class="button2" onclick=" onCancelFilter()" />
+        <button class="button3" onclick="goToFavorite()">למועדפים</button>
+
+    </div>
+
+    <div id="loader" class="loader"></div>
+
+    <div id="resturantInfo"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB0AieRfE8jFeAQWL8okf7J69APWc8VTI&callback=initMap"
+        async defer></script>
+    <script src="loader.js"></script>
+
+    <script src="Restaurants.js"></script>
+    <script src="modal.js">
+
+    </script>
+
+    <script src="getBite.js"></script>
+
+</body>
+
+</html>
